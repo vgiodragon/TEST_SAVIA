@@ -52,7 +52,7 @@ def main():
     #for x in range (4,5):
     total = x*(1)
     print("Envio "+str(total)+" usuarios "+str(datetime.datetime.now()))
-    for tanda in range(0,15):
+    for tanda in range(1,20,2):
         _thread.start_new_thread( miPOST,(jsonsArray, latitude, longitudes, tanda, total ))
         sleep(60)
     sleep(10)

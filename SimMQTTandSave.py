@@ -54,7 +54,7 @@ def main():
     longitudes = [-76.940022, -76.951022, -76.944022]
     total = x*(1)
     print("Envio "+str(total)+" alarmas "+str(datetime.datetime.now()))
-    for tanda in range(1,16):
+    for tanda in range(1,20,2):
         _thread.start_new_thread( miMQTT,(jsonsArray, latitude, longitudes, tanda, total ))
         sleep(60)
         #print("Fin "+str(datetime.datetime.now()) ) #+" total DB "+str(db.responses.count()))
